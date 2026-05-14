@@ -94,12 +94,6 @@ function shuffle(array) {
 const shuffled = shuffle(fontPresets);
 let currentIndex = 0;
 
-const letter = document.getElementById('k-letter');
-
-// Set initial font
-letter.style.fontFamily = `'${shuffled[0].family}', serif`;
-letter.style.fontWeight = shuffled[0].weight;
-
 let tapLocked = false;
 let lastTouchTime = 0;
 
@@ -115,8 +109,8 @@ function handleTap() {
         newOrder.forEach(f => shuffled.push(f));
     }
 
-    letter.style.fontFamily = `'${shuffled[currentIndex].family}', serif`;
-    letter.style.fontWeight = shuffled[currentIndex].weight;
+    document.body.style.fontFamily = `'${shuffled[currentIndex].family}', serif`;
+    document.body.style.fontWeight = shuffled[currentIndex].weight;
 
     setTimeout(() => { tapLocked = false; }, 100);
 }
