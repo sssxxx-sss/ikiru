@@ -17,21 +17,21 @@ html, body {
 }
 
 #k-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max(48px, 10vh);
+    height: max(48px, 10vh);
 }
 
 .k-letter {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: max(48px, 10vh);
     line-height: 1;
     color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: none;
 }
