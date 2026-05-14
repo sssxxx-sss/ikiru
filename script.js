@@ -1,40 +1,87 @@
-// Japanese font presets: [family, weights]
-const fontPresets = {
-    'Noto Sans JP': [100, 300, 400, 500, 700, 900],
-    'Noto Serif JP': [200, 300, 400, 500, 600, 700, 900],
-    'Zen Kaku Gothic Antique': [400, 500, 700, 900],
-    'Zen Old Mincho': [400, 700, 900],
-    'Shippori Mincho': [400, 500, 600, 700, 800],
-    'Shippori Mincho B1': [400, 500, 600, 700, 800],
-    'Zen Maru Gothic': [400, 500, 700, 900],
-    'Kiwi Maru': [300, 400, 500],
-    'DotGothic16': [400],
-    'Hachi Maru Pop': [400],
-    'Klee One': [400, 600],
-    'Dela Gothic One': [400],
-    'Train One': [400],
-    'Rampart One': [400],
-    'Zen Kurenaido': [400],
-    'M PLUS 1': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    'M PLUS 1p': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    'M PLUS 2': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    'M PLUS Rounded 1c': [100, 300, 400, 500, 700, 800, 900],
-    'Kosugi': [400],
-    'Kosugi Maru': [400],
-    'Sawarabi Gothic': [400],
-    'Sawarabi Mincho': [400],
-    'Hina Mincho': [400],
-};
+const fontPresets = [
+    { family: 'Noto Sans JP', weight: 100 },
+    { family: 'Noto Sans JP', weight: 300 },
+    { family: 'Noto Sans JP', weight: 400 },
+    { family: 'Noto Sans JP', weight: 500 },
+    { family: 'Noto Sans JP', weight: 700 },
+    { family: 'Noto Sans JP', weight: 900 },
+    { family: 'Noto Serif JP', weight: 200 },
+    { family: 'Noto Serif JP', weight: 300 },
+    { family: 'Noto Serif JP', weight: 400 },
+    { family: 'Noto Serif JP', weight: 500 },
+    { family: 'Noto Serif JP', weight: 600 },
+    { family: 'Noto Serif JP', weight: 700 },
+    { family: 'Noto Serif JP', weight: 900 },
+    { family: 'Zen Kaku Gothic Antique', weight: 400 },
+    { family: 'Zen Kaku Gothic Antique', weight: 500 },
+    { family: 'Zen Kaku Gothic Antique', weight: 700 },
+    { family: 'Zen Kaku Gothic Antique', weight: 900 },
+    { family: 'Zen Old Mincho', weight: 400 },
+    { family: 'Zen Old Mincho', weight: 700 },
+    { family: 'Zen Old Mincho', weight: 900 },
+    { family: 'Shippori Mincho', weight: 400 },
+    { family: 'Shippori Mincho', weight: 500 },
+    { family: 'Shippori Mincho', weight: 600 },
+    { family: 'Shippori Mincho', weight: 700 },
+    { family: 'Shippori Mincho', weight: 800 },
+    { family: 'Shippori Mincho B1', weight: 400 },
+    { family: 'Shippori Mincho B1', weight: 500 },
+    { family: 'Shippori Mincho B1', weight: 600 },
+    { family: 'Shippori Mincho B1', weight: 700 },
+    { family: 'Shippori Mincho B1', weight: 800 },
+    { family: 'Zen Maru Gothic', weight: 400 },
+    { family: 'Zen Maru Gothic', weight: 500 },
+    { family: 'Zen Maru Gothic', weight: 700 },
+    { family: 'Zen Maru Gothic', weight: 900 },
+    { family: 'Kiwi Maru', weight: 300 },
+    { family: 'Kiwi Maru', weight: 400 },
+    { family: 'Kiwi Maru', weight: 500 },
+    { family: 'DotGothic16', weight: 400 },
+    { family: 'Hachi Maru Pop', weight: 400 },
+    { family: 'Klee One', weight: 400 },
+    { family: 'Klee One', weight: 600 },
+    { family: 'Dela Gothic One', weight: 400 },
+    { family: 'Train One', weight: 400 },
+    { family: 'Rampart One', weight: 400 },
+    { family: 'Zen Kurenaido', weight: 400 },
+    { family: 'M PLUS 1', weight: 100 },
+    { family: 'M PLUS 1', weight: 200 },
+    { family: 'M PLUS 1', weight: 300 },
+    { family: 'M PLUS 1', weight: 400 },
+    { family: 'M PLUS 1', weight: 500 },
+    { family: 'M PLUS 1', weight: 600 },
+    { family: 'M PLUS 1', weight: 700 },
+    { family: 'M PLUS 1', weight: 800 },
+    { family: 'M PLUS 1', weight: 900 },
+    { family: 'M PLUS 1p', weight: 100 },
+    { family: 'M PLUS 1p', weight: 300 },
+    { family: 'M PLUS 1p', weight: 400 },
+    { family: 'M PLUS 1p', weight: 500 },
+    { family: 'M PLUS 1p', weight: 700 },
+    { family: 'M PLUS 1p', weight: 900 },
+    { family: 'M PLUS 2', weight: 100 },
+    { family: 'M PLUS 2', weight: 200 },
+    { family: 'M PLUS 2', weight: 300 },
+    { family: 'M PLUS 2', weight: 400 },
+    { family: 'M PLUS 2', weight: 500 },
+    { family: 'M PLUS 2', weight: 600 },
+    { family: 'M PLUS 2', weight: 700 },
+    { family: 'M PLUS 2', weight: 800 },
+    { family: 'M PLUS 2', weight: 900 },
+    { family: 'M PLUS Rounded 1c', weight: 100 },
+    { family: 'M PLUS Rounded 1c', weight: 300 },
+    { family: 'M PLUS Rounded 1c', weight: 400 },
+    { family: 'M PLUS Rounded 1c', weight: 500 },
+    { family: 'M PLUS Rounded 1c', weight: 700 },
+    { family: 'M PLUS Rounded 1c', weight: 800 },
+    { family: 'M PLUS Rounded 1c', weight: 900 },
+    { family: 'Kosugi', weight: 400 },
+    { family: 'Kosugi Maru', weight: 400 },
+    { family: 'Sawarabi Gothic', weight: 400 },
+    { family: 'Sawarabi Mincho', weight: 400 },
+    { family: 'Hina Mincho', weight: 400 },
+];
 
-// Generate all font variations
-const allVariations = [];
-for (const [family, weights] of Object.entries(fontPresets)) {
-    for (const weight of weights) {
-        allVariations.push({ family, weight });
-    }
-}
-
-// Shuffle
 function shuffle(array) {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -44,88 +91,32 @@ function shuffle(array) {
     return arr;
 }
 
-const shuffled = shuffle(allVariations);
-
-// Create elements
-const container = document.getElementById('k-container');
-const elements = [];
-
-shuffled.forEach((font, i) => {
-    const div = document.createElement('div');
-    div.className = 'k-letter';
-    div.textContent = '生';
-    div.style.fontFamily = `'${font.family}', serif`;
-    div.style.fontWeight = font.weight;
-    div.style.opacity = i === 0 ? '1' : '0';
-    container.appendChild(div);
-    elements.push(div);
-});
-
-// Progressive font loading
-const batchSize = 10;
-const batches = [];
-for (let i = 0; i < shuffled.length; i += batchSize) {
-    batches.push(shuffled.slice(i, i + batchSize));
-}
-
-let loadedBatches = 0;
-
-function loadBatch(batch) {
-    return new Promise((resolve) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        const families = batch.map(f => `family=${encodeURIComponent(f.family)}:wght@${f.weight}`).join('&');
-        link.href = `https://fonts.googleapis.com/css2?${families}&text=%E7%94%9F&display=swap`;
-        link.onload = resolve;
-        link.onerror = resolve;
-        document.head.appendChild(link);
-    });
-}
-
-// Load first 3 batches then start
-Promise.all(batches.slice(0, 3).map(batch => loadBatch(batch))).then(() => {
-    document.fonts.ready.then(() => {
-        ready = true;
-    });
-});
-
-// Continue loading remaining
-function loadRemaining() {
-    if (loadedBatches >= batches.length) return;
-    const batch = batches[loadedBatches];
-    if (!batch) return;
-    loadBatch(batch).then(() => {
-        loadedBatches++;
-        setTimeout(loadRemaining, 100);
-    });
-}
-
-loadedBatches = 3;
-setTimeout(loadRemaining, 500);
-
+const shuffled = shuffle(fontPresets);
 let currentIndex = 0;
-let ready = false;
+
+const letter = document.getElementById('k-letter');
+
+// Set initial font
+letter.style.fontFamily = `'${shuffled[0].family}', serif`;
+letter.style.fontWeight = shuffled[0].weight;
+
 let tapLocked = false;
 let lastTouchTime = 0;
 
 function handleTap() {
-    if (!ready || tapLocked) return;
+    if (tapLocked) return;
     tapLocked = true;
 
-    elements[currentIndex].style.opacity = '0';
     currentIndex = (currentIndex + 1) % shuffled.length;
 
     if (currentIndex === 0) {
-        const newOrder = shuffle(allVariations);
-        newOrder.forEach((font, i) => {
-            elements[i].style.fontFamily = `'${font.family}', serif`;
-            elements[i].style.fontWeight = font.weight;
-        });
+        const newOrder = shuffle(fontPresets);
         shuffled.length = 0;
         newOrder.forEach(f => shuffled.push(f));
     }
 
-    elements[currentIndex].style.opacity = '1';
+    letter.style.fontFamily = `'${shuffled[currentIndex].family}', serif`;
+    letter.style.fontWeight = shuffled[currentIndex].weight;
 
     setTimeout(() => { tapLocked = false; }, 100);
 }
