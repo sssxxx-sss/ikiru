@@ -26,8 +26,12 @@ html, body {
 }
 
 .k-letter {
+    position: absolute;
     font-size: max(48px, 10vh);
     line-height: 1;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: none;
 }
