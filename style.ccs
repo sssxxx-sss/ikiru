@@ -14,13 +14,12 @@ html, body {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#k-letter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body {
     font-size: max(48px, 10vh);
     line-height: 1;
     color: black;
