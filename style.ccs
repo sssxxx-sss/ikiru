@@ -16,16 +16,7 @@ html, body {
     -webkit-user-select: none;
 }
 
-#k-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: max(48px, 10vh);
-    height: max(48px, 10vh);
-}
-
-.k-letter {
+#k-letter {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,5 +24,4 @@ html, body {
     font-size: max(48px, 10vh);
     line-height: 1;
     color: black;
-    transition: none;
 }
