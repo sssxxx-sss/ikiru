@@ -1,6 +1,10 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -12,13 +16,11 @@ html, body {
     -webkit-user-select: none;
 }
 
-body {
-    display: grid;
-    place-items: center;
-}
-
-#k-letter {
-    font-size: max(48px, 10vh);
-    line-height: 1;
-    color: black;
+#k-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max(48px, 10vh);
+    height: max(48px, 10vh);
 }
