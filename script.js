@@ -11,7 +11,6 @@ const fontPresets = {
     'DotGothic16': [400],
     'Hachi Maru Pop': [400],
     'Klee One': [400, 600],
-    'RocknRoll One': [400],
     'Dela Gothic One': [400],
     'Train One': [400],
     'Rampart One': [400],
@@ -25,8 +24,6 @@ const fontPresets = {
     'Sawarabi Gothic': [400],
     'Sawarabi Mincho': [400],
     'Hina Mincho': [400],
-    'Tokyo': [400],
-    'Dosis': [200, 300, 400, 500, 600, 700, 800],
 };
 
 // Generate all font variations
@@ -60,13 +57,12 @@ shuffled.forEach((font, i) => {
     div.style.fontFamily = `'${font.family}', serif`;
     div.style.fontWeight = font.weight;
     div.style.opacity = i === 0 ? '1' : '0';
-    div.style.position = 'absolute';
     container.appendChild(div);
     elements.push(div);
 });
 
 // Progressive font loading
-const batchSize = 15;
+const batchSize = 10;
 const batches = [];
 for (let i = 0; i < shuffled.length; i += batchSize) {
     batches.push(shuffled.slice(i, i + batchSize));
