@@ -97,7 +97,7 @@ let currentIndex = 0;
 const letter = document.getElementById('k-letter');
 
 function updateSize() {
-    const vh = window.innerHeight * 0.1;
+    const vh = window.innerHeight * 0.12;
     const size = Math.max(48, vh);
     letter.style.fontSize = size + 'px';
 }
