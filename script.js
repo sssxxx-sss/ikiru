@@ -96,19 +96,30 @@ let currentIndex = 0;
 
 const letter = document.getElementById('k-letter');
 
-function updateSize() {
-    const vh = window.innerHeight * 0.12;
-    const size = Math.max(48, vh);
-    letter.style.fontSize = size + 'px';
+function centerElement() {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const fontSize = Math.max(48, vh * 0.12);
+    letter.style.fontSize = fontSize + 'px';
+    
+    const rect = letter.getBoundingClientRect();
+    const elemWidth = rect.width;
+    const elemHeight = rect.height;
+    
+    const left = (vw - elemWidth) / 2;
+    const top = (vh - elemHeight) / 2;
+    
+    letter.style.left = left + 'px';
+    letter.style.top = top + 'px';
 }
 
-updateSize();
-window.addEventListener('resize', updateSize);
+centerElement();
+window.addEventListener('resize', centerElement);
 
 document.fonts.ready.then(() => {
     letter.style.fontFamily = `'${shuffled[0].family}', serif`;
     letter.style.fontWeight = shuffled[0].weight;
-    updateSize();
+    setTimeout(centerElement, 100);
 });
 
 let tapLocked = false;
@@ -128,8 +139,11 @@ function handleTap() {
 
     letter.style.fontFamily = `'${shuffled[currentIndex].family}', serif`;
     letter.style.fontWeight = shuffled[currentIndex].weight;
-
-    setTimeout(() => { tapLocked = false; }, 100);
+    
+    setTimeout(() => {
+        centerElement();
+        tapLocked = false;
+    }, 100);
 }
 
 document.addEventListener('touchend', (e) => {
