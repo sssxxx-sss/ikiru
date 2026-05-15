@@ -96,8 +96,20 @@ let currentIndex = 0;
 
 const letter = document.getElementById('k-letter');
 
-letter.style.fontFamily = `'${shuffled[0].family}', serif`;
-letter.style.fontWeight = shuffled[0].weight;
+function updateSize() {
+    const vh = window.innerHeight * 0.1;
+    const size = Math.max(48, vh);
+    letter.style.fontSize = size + 'px';
+}
+
+updateSize();
+window.addEventListener('resize', updateSize);
+
+document.fonts.ready.then(() => {
+    letter.style.fontFamily = `'${shuffled[0].family}', serif`;
+    letter.style.fontWeight = shuffled[0].weight;
+    updateSize();
+});
 
 let tapLocked = false;
 let lastTouchTime = 0;
