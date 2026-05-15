@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -14,13 +19,18 @@ html, body {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    position: relative;
 }
 
-#k-svg {
-    position: absolute;
+#k-letter {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: max(48px, 10vh);
-    height: max(48px, 10vh);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 10vh;
+    line-height: 1;
+    color: black;
+    text-align: center;
 }
